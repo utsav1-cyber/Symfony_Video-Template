@@ -4,6 +4,9 @@ namespace App\Controller;
 
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\Routing\Annotation\Route;
+use App\Utils\CategoryTreeAdminList;
+use App\Utils\CategoryTreeAdminOptionList;
+use App\Entity\Category;
 
 /**
  * @Route("/admin")
@@ -18,12 +21,17 @@ class AdminController extends AbstractController
         return $this->render('admin/my_profile.html.twig');
     }
 
+
     /**
      * @Route("/categories", name="categories")
      */
-    public function categories()
+    public function categories(CategoryTreeAdminList $categories)
     {
-        return $this->render('admin/categories.html.twig');
+        $categories->getCategoryList($categories->buildTree());
+
+        return $this->render('admin/categories.html.twig',[
+            'categories'=>$categories->categorylist
+        ]);
     }
 
     /**
@@ -32,6 +40,17 @@ class AdminController extends AbstractController
     public function editCategory()
     {
         return $this->render('admin/edit_category.html.twig');
+    }
+
+    /**
+     * @Route("/delete-category/{id}", name="delete_category")
+     */
+    public function deleteCategory(Category $category)
+    {
+        $entityManager = $this->getDoctrine()->getManager();
+        $entityManager->remove($category);
+        $entityManager->flush();
+        return $this->redirectToRoute('categories');
     }
 
     /**
@@ -56,6 +75,14 @@ class AdminController extends AbstractController
     public function users()
     {
         return $this->render('admin/users.html.twig');
+    }
+
+    public function getAllCategories(CategoryTreeAdminOptionList $categories)
+    {
+        $categories->getCategoryList($categories->buildTree());
+        return $this->render('admin/_all_categories.html.twig',[
+            'categories'=>$categories
+        ]);
     }
 }
 

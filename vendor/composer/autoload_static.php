@@ -12,10 +12,10 @@ class ComposerStaticInitefd981b88c422a42c7784f06f31f25f8
         '0e6d7bf4a5811bfa5cf40c5ccd6fae6a' => __DIR__ . '/..' . '/symfony/polyfill-mbstring/bootstrap.php',
         '0d59ee240a4cd96ddbb4ff164fccea4d' => __DIR__ . '/..' . '/symfony/polyfill-php73/bootstrap.php',
         '667aeda72477189d0494fecd327c3641' => __DIR__ . '/..' . '/symfony/var-dumper/Resources/functions/dump.php',
-        '7e9bd612cc444b3eed788ebbe46263a0' => __DIR__ . '/..' . '/laminas/laminas-zendframework-bridge/src/autoload.php',
         '8825ede83f2f289127722d4e842cf7e8' => __DIR__ . '/..' . '/symfony/polyfill-intl-grapheme/bootstrap.php',
         'e69f7f6ee287b969198c3c9d6777bd38' => __DIR__ . '/..' . '/symfony/polyfill-intl-normalizer/bootstrap.php',
         'b6b991a57620e2fb6b2f66f03fe9ddc2' => __DIR__ . '/..' . '/symfony/string/Resources/functions.php',
+        '7e9bd612cc444b3eed788ebbe46263a0' => __DIR__ . '/..' . '/laminas/laminas-zendframework-bridge/src/autoload.php',
     );
 
     public static $prefixLengthsPsr4 = array (
@@ -55,9 +55,11 @@ class ComposerStaticInitefd981b88c422a42c7784f06f31f25f8
             'Symfony\\Component\\Config\\' => 25,
             'Symfony\\Component\\Cache\\' => 24,
             'Symfony\\Component\\Asset\\' => 24,
+            'Symfony\\Bundle\\WebProfilerBundle\\' => 33,
             'Symfony\\Bundle\\TwigBundle\\' => 26,
             'Symfony\\Bundle\\MakerBundle\\' => 27,
             'Symfony\\Bundle\\FrameworkBundle\\' => 31,
+            'Symfony\\Bundle\\DebugBundle\\' => 27,
             'Symfony\\Bridge\\Twig\\' => 20,
             'Symfony\\Bridge\\ProxyManager\\' => 28,
             'Symfony\\Bridge\\Doctrine\\' => 24,
@@ -231,6 +233,10 @@ class ComposerStaticInitefd981b88c422a42c7784f06f31f25f8
         array (
             0 => __DIR__ . '/..' . '/symfony/asset',
         ),
+        'Symfony\\Bundle\\WebProfilerBundle\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/symfony/web-profiler-bundle',
+        ),
         'Symfony\\Bundle\\TwigBundle\\' => 
         array (
             0 => __DIR__ . '/..' . '/symfony/twig-bundle',
@@ -242,6 +248,10 @@ class ComposerStaticInitefd981b88c422a42c7784f06f31f25f8
         'Symfony\\Bundle\\FrameworkBundle\\' => 
         array (
             0 => __DIR__ . '/..' . '/symfony/framework-bundle',
+        ),
+        'Symfony\\Bundle\\DebugBundle\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/symfony/debug-bundle',
         ),
         'Symfony\\Bridge\\Twig\\' => 
         array (
@@ -382,14 +392,15 @@ class ComposerStaticInitefd981b88c422a42c7784f06f31f25f8
     public static $classMap = array (
         'App\\Controller\\AdminController' => __DIR__ . '/../..' . '/src/Controller/AdminController.php',
         'App\\Controller\\FrontController' => __DIR__ . '/../..' . '/src/Controller/FrontController.php',
-        'App\\DataFixtures\\AppFixtures' => __DIR__ . '/../..' . '/src/DataFixtures/AppFixtures.php',
         'App\\DataFixtures\\CategoryFixtures' => __DIR__ . '/../..' . '/src/DataFixtures/CategoryFixtures.php',
-        'App\\DataFixtures\\ObjectManager' => __DIR__ . '/../..' . '/src/DataFixtures/ObjectManager.php',
         'App\\Entity\\Category' => __DIR__ . '/../..' . '/src/Entity/Category.php',
         'App\\Entity\\Video' => __DIR__ . '/../..' . '/src/Entity/Video.php',
         'App\\Kernel' => __DIR__ . '/../..' . '/src/Kernel.php',
         'App\\Repository\\CategoryRepository' => __DIR__ . '/../..' . '/src/Repository/CategoryRepository.php',
         'App\\Repository\\VideoRepository' => __DIR__ . '/../..' . '/src/Repository/VideoRepository.php',
+        'App\\Twig\\AppExtension' => __DIR__ . '/../..' . '/src/Twig/AppExtension.php',
+        'App\\Utils\\AbstractClasses\\CategoryTreeAbstract' => __DIR__ . '/../..' . '/src/Utils/AbstractClasses/CategoryTreeAbstract.php',
+        'App\\Utils\\CategoryTreeFrontPage' => __DIR__ . '/../..' . '/src/Utils/CategoryTreeFrontPage.php',
         'Attribute' => __DIR__ . '/..' . '/symfony/polyfill-php80/Resources/stubs/Attribute.php',
         'Composer\\InstalledVersions' => __DIR__ . '/..' . '/composer/InstalledVersions.php',
         'Doctrine\\Bundle\\DoctrineBundle\\CacheWarmer\\DoctrineMetadataCacheWarmer' => __DIR__ . '/..' . '/doctrine/doctrine-bundle/CacheWarmer/DoctrineMetadataCacheWarmer.php',
@@ -2146,6 +2157,11 @@ class ComposerStaticInitefd981b88c422a42c7784f06f31f25f8
         'Symfony\\Bridge\\Twig\\TokenParser\\TransTokenParser' => __DIR__ . '/..' . '/symfony/twig-bridge/TokenParser/TransTokenParser.php',
         'Symfony\\Bridge\\Twig\\Translation\\TwigExtractor' => __DIR__ . '/..' . '/symfony/twig-bridge/Translation/TwigExtractor.php',
         'Symfony\\Bridge\\Twig\\UndefinedCallableHandler' => __DIR__ . '/..' . '/symfony/twig-bridge/UndefinedCallableHandler.php',
+        'Symfony\\Bundle\\DebugBundle\\Command\\ServerDumpPlaceholderCommand' => __DIR__ . '/..' . '/symfony/debug-bundle/Command/ServerDumpPlaceholderCommand.php',
+        'Symfony\\Bundle\\DebugBundle\\DebugBundle' => __DIR__ . '/..' . '/symfony/debug-bundle/DebugBundle.php',
+        'Symfony\\Bundle\\DebugBundle\\DependencyInjection\\Compiler\\DumpDataCollectorPass' => __DIR__ . '/..' . '/symfony/debug-bundle/DependencyInjection/Compiler/DumpDataCollectorPass.php',
+        'Symfony\\Bundle\\DebugBundle\\DependencyInjection\\Configuration' => __DIR__ . '/..' . '/symfony/debug-bundle/DependencyInjection/Configuration.php',
+        'Symfony\\Bundle\\DebugBundle\\DependencyInjection\\DebugExtension' => __DIR__ . '/..' . '/symfony/debug-bundle/DependencyInjection/DebugExtension.php',
         'Symfony\\Bundle\\FrameworkBundle\\CacheWarmer\\AbstractPhpFileCacheWarmer' => __DIR__ . '/..' . '/symfony/framework-bundle/CacheWarmer/AbstractPhpFileCacheWarmer.php',
         'Symfony\\Bundle\\FrameworkBundle\\CacheWarmer\\AnnotationsCacheWarmer' => __DIR__ . '/..' . '/symfony/framework-bundle/CacheWarmer/AnnotationsCacheWarmer.php',
         'Symfony\\Bundle\\FrameworkBundle\\CacheWarmer\\CachePoolClearerCacheWarmer' => __DIR__ . '/..' . '/symfony/framework-bundle/CacheWarmer/CachePoolClearerCacheWarmer.php',
@@ -2330,6 +2346,17 @@ class ComposerStaticInitefd981b88c422a42c7784f06f31f25f8
         'Symfony\\Bundle\\TwigBundle\\DependencyInjection\\TwigExtension' => __DIR__ . '/..' . '/symfony/twig-bundle/DependencyInjection/TwigExtension.php',
         'Symfony\\Bundle\\TwigBundle\\TemplateIterator' => __DIR__ . '/..' . '/symfony/twig-bundle/TemplateIterator.php',
         'Symfony\\Bundle\\TwigBundle\\TwigBundle' => __DIR__ . '/..' . '/symfony/twig-bundle/TwigBundle.php',
+        'Symfony\\Bundle\\WebProfilerBundle\\Controller\\ExceptionPanelController' => __DIR__ . '/..' . '/symfony/web-profiler-bundle/Controller/ExceptionPanelController.php',
+        'Symfony\\Bundle\\WebProfilerBundle\\Controller\\ProfilerController' => __DIR__ . '/..' . '/symfony/web-profiler-bundle/Controller/ProfilerController.php',
+        'Symfony\\Bundle\\WebProfilerBundle\\Controller\\RouterController' => __DIR__ . '/..' . '/symfony/web-profiler-bundle/Controller/RouterController.php',
+        'Symfony\\Bundle\\WebProfilerBundle\\Csp\\ContentSecurityPolicyHandler' => __DIR__ . '/..' . '/symfony/web-profiler-bundle/Csp/ContentSecurityPolicyHandler.php',
+        'Symfony\\Bundle\\WebProfilerBundle\\Csp\\NonceGenerator' => __DIR__ . '/..' . '/symfony/web-profiler-bundle/Csp/NonceGenerator.php',
+        'Symfony\\Bundle\\WebProfilerBundle\\DependencyInjection\\Configuration' => __DIR__ . '/..' . '/symfony/web-profiler-bundle/DependencyInjection/Configuration.php',
+        'Symfony\\Bundle\\WebProfilerBundle\\DependencyInjection\\WebProfilerExtension' => __DIR__ . '/..' . '/symfony/web-profiler-bundle/DependencyInjection/WebProfilerExtension.php',
+        'Symfony\\Bundle\\WebProfilerBundle\\EventListener\\WebDebugToolbarListener' => __DIR__ . '/..' . '/symfony/web-profiler-bundle/EventListener/WebDebugToolbarListener.php',
+        'Symfony\\Bundle\\WebProfilerBundle\\Profiler\\TemplateManager' => __DIR__ . '/..' . '/symfony/web-profiler-bundle/Profiler/TemplateManager.php',
+        'Symfony\\Bundle\\WebProfilerBundle\\Twig\\WebProfilerExtension' => __DIR__ . '/..' . '/symfony/web-profiler-bundle/Twig/WebProfilerExtension.php',
+        'Symfony\\Bundle\\WebProfilerBundle\\WebProfilerBundle' => __DIR__ . '/..' . '/symfony/web-profiler-bundle/WebProfilerBundle.php',
         'Symfony\\Component\\Asset\\Context\\ContextInterface' => __DIR__ . '/..' . '/symfony/asset/Context/ContextInterface.php',
         'Symfony\\Component\\Asset\\Context\\NullContext' => __DIR__ . '/..' . '/symfony/asset/Context/NullContext.php',
         'Symfony\\Component\\Asset\\Context\\RequestStackContext' => __DIR__ . '/..' . '/symfony/asset/Context/RequestStackContext.php',

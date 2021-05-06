@@ -382,6 +382,15 @@
       ),
       'reference' => '90374b8ed059325b49a29b55b3f8bb4062c87629',
     ),
+    'symfony/debug-bundle' => 
+    array (
+      'pretty_version' => 'v5.2.4',
+      'version' => '5.2.4.0',
+      'aliases' => 
+      array (
+      ),
+      'reference' => 'ec21bd26d24dab02ac40e4bec362b3f4032486e8',
+    ),
     'symfony/dependency-injection' => 
     array (
       'pretty_version' => 'v5.2.7',
@@ -686,6 +695,15 @@
       array (
       ),
       'reference' => '01184a5ab95eb9500b9b0ef3e525979e003d9c81',
+    ),
+    'symfony/web-profiler-bundle' => 
+    array (
+      'pretty_version' => 'v5.2.7',
+      'version' => '5.2.7.0',
+      'aliases' => 
+      array (
+      ),
+      'reference' => 'c2beee950c917dabdb2c339290bba827c862674c',
     ),
     'symfony/yaml' => 
     array (
