@@ -51,6 +51,7 @@ return array(
     'Symfony\\Bundle\\DebugBundle\\' => array($vendorDir . '/symfony/debug-bundle'),
     'Symfony\\Bridge\\Twig\\' => array($vendorDir . '/symfony/twig-bridge'),
     'Symfony\\Bridge\\ProxyManager\\' => array($vendorDir . '/symfony/proxy-manager-bridge'),
+    'Symfony\\Bridge\\PhpUnit\\' => array($vendorDir . '/symfony/phpunit-bridge'),
     'Symfony\\Bridge\\Doctrine\\' => array($vendorDir . '/symfony/doctrine-bridge'),
     'Sensio\\Bundle\\FrameworkExtraBundle\\' => array($vendorDir . '/sensio/framework-extra-bundle/src'),
     'Psr\\Log\\' => array($vendorDir . '/psr/log/Psr/Log'),

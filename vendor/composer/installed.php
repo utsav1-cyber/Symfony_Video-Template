@@ -560,6 +560,15 @@
       ),
       'reference' => '5d0f633f9bbfcf7ec642a2b5037268e61b0a62ce',
     ),
+    'symfony/phpunit-bridge' => 
+    array (
+      'pretty_version' => 'v5.2.7',
+      'version' => '5.2.7.0',
+      'aliases' => 
+      array (
+      ),
+      'reference' => 'f530f0153f4a871b2c65dd6b295d7b8d03a16eac',
+    ),
     'symfony/polyfill-ctype' => 
     array (
       'replaced' => 

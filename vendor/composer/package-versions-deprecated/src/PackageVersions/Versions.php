@@ -108,6 +108,7 @@ final class Versions
   'nikic/php-parser' => 'v4.10.4@c6d052fc58cb876152f89f532b95a8d7907e7f0e',
   'symfony/debug-bundle' => 'v5.2.4@ec21bd26d24dab02ac40e4bec362b3f4032486e8',
   'symfony/maker-bundle' => 'v1.30.2@a395a85aa4ded6c1fa3da118d60329b64b6c2acd',
+  'symfony/phpunit-bridge' => 'v5.2.7@f530f0153f4a871b2c65dd6b295d7b8d03a16eac',
   'symfony/web-profiler-bundle' => 'v5.2.7@c2beee950c917dabdb2c339290bba827c862674c',
   'symfony/polyfill-ctype' => '*@abdaa7f89f9b04a8626db2babb8aad5ec5e70aa5',
   'symfony/polyfill-iconv' => '*@abdaa7f89f9b04a8626db2babb8aad5ec5e70aa5',
